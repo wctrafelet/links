@@ -1,15 +1,53 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homelab Dashboard</title>
+    <style>
+        :root { --bg: #0f172a; --card: #1e293b; --text: #f1f5f9; --sub: #94a3b8; --accent: #38bdf8; }
+        body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 40px 20px; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 50px; }
+        h1 { font-size: 2.5rem; margin: 0; color: var(--accent); }
+        .section-title { font-size: 1.2rem; color: var(--accent); margin: 30px 0 15px; border-bottom: 1px solid #334155; padding-bottom: 5px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .card { background: var(--card); padding: 20px; border-radius: 12px; text-decoration: none; color: inherit; border: 1px solid #334155; transition: 0.2s; }
+        .card:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3); }
+        .card h3 { margin: 0 0 8px 0; font-size: 1.1rem; }
+        .card p { margin: 0; font-size: 0.9rem; color: var(--sub); line-height: 1.4; }
+    </style>
+</head>
 <body>
     <div class="container">
-        <!-- Replace the URL below with your actual profile picture URL -->
-        <img src="https://github.com" alt="Profile" class="profile-img">
-        <h1>Wayne Trafelet</h1>
-        <p>Welcome to my links page!</p>
-        
-        <a href="https://github.com" class="link">GitHub</a>
-        <a href="https://linkedin.com" class="link">LinkedIn</a>
-        <a href="mailto:your@email.com" class="link">Email Me</a>
+        <header>
+            <h1>My Homelab</h1>
+            <p>Internal Services Control Center</p>
+        </header>
+
+        <div class="section-title">Infrastructure</div>
+        <div class="grid">
+            <a href="http://192.168.1.10" class="card">
+                <h3>Proxmox</h3>
+                <p>Virtualization management and cluster control.</p>
+            </a>
+            <a href="http://pi.hole" class="card">
+                <h3>Pi-hole</h3>
+                <p>Network-wide ad blocking and local DNS.</p>
+            </a>
+        </div>
+
+        <div class="section-title">Media & Storage</div>
+        <div class="grid">
+            <a href="http://plex:32400" class="card">
+                <h3>Plex</h3>
+                <p>Media streaming and home theater server.</p>
+            </a>
+            <a href="http://truenas.local" class="card">
+                <h3>TrueNAS</h3>
+                <p>Primary storage pool and ZFS management.</p>
+            </a>
+        </div>
     </div>
 </body>
 </html>
-
